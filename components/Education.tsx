@@ -15,7 +15,7 @@ const educations = [
     institution: 'Sri Chaitanya Jr College',
     degree: 'Intermediate (MPC)',
     period: '2020 – 2022',
-    score: 'CGPA: 8.6',
+    score: 'CGPA: 8.0',
     color: 'border-blue-500',
     glow: 'rgba(59,130,246,0.2)',
     delay: '200ms'
@@ -24,7 +24,7 @@ const educations = [
     institution: 'SUSHRUTA EM HIGH SCHOOL',
     degree: 'Secondary Education',
     period: '2020',
-    score: 'Marks: 527 / 600',
+    score: 'Marks: 527 / 600 (89%)',
     color: 'border-purple-500',
     glow: 'rgba(168,85,247,0.2)',
     delay: '400ms'
@@ -41,19 +41,19 @@ export const Education: React.FC = () => {
 
       <div className="grid md:grid-cols-3 gap-8 px-4">
         {educations.map((edu, i) => (
-          <div 
-            key={i} 
+          <div
+            key={i}
             className={`group glass p-8 rounded-[2.5rem] border-t-[6px] ${edu.color} relative overflow-hidden transition-all duration-700 hover:-translate-y-4 hover:shadow-[0_30px_60px_-15px_${edu.glow}] animate-[fade-up-blur_0.8s_ease-out_forwards]`}
             style={{ animationDelay: edu.delay }}
           >
             {/* Dynamic Reflection Layer */}
             <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/[0.02] to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 ease-in-out"></div>
-            
+
             <div className="space-y-6 relative z-10">
               <span className="text-gray-500 text-[10px] font-black uppercase tracking-[0.2em] bg-white/5 px-3 py-1 rounded-full group-hover:bg-green-500/10 group-hover:text-green-400 transition-all">
                 {edu.period}
               </span>
-              
+
               <div className="min-h-[80px]">
                 <h3 className="text-xl font-black text-white leading-tight group-hover:text-green-400 transition-colors duration-300">
                   {edu.institution}

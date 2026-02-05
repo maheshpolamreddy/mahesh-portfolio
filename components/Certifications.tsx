@@ -2,30 +2,30 @@
 import React from 'react';
 
 const certs = [
-  { 
-    title: 'Wipro Talent Next Program', 
-    issuer: 'AI, Cyber Security, Cloud Computing', 
+  {
+    title: 'Wipro Talent Next Program',
+    issuer: 'AI, Cyber Security, Cloud Computing',
     icon: 'fa-microchip',
     id: '01',
     glow: 'group-hover:shadow-cyan-500/20'
   },
-  { 
-    title: 'Social Networks', 
-    issuer: 'NPTEL', 
+  {
+    title: 'Social Networks',
+    issuer: 'NPTEL',
     icon: 'fa-users',
     id: '02',
     glow: 'group-hover:shadow-blue-500/20'
   },
-  { 
-    title: 'Critical Thinking & Problem Solving', 
-    issuer: 'edX', 
+  {
+    title: 'Critical Thinking & Problem Solving',
+    issuer: 'edX',
     icon: 'fa-brain',
     id: '03',
     glow: 'group-hover:shadow-purple-500/20'
   },
-  { 
-    title: 'AI Fundamentals', 
-    issuer: 'IBM', 
+  {
+    title: 'IBM Artificial Intelligence Fundamentals',
+    issuer: 'IBM',
     icon: 'fa-robot',
     id: '04',
     glow: 'group-hover:shadow-yellow-500/20'
@@ -47,13 +47,13 @@ export const Certifications: React.FC = () => {
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {certs.map((cert, i) => (
-          <div 
-            key={i} 
+          <div
+            key={i}
             className="group relative perspective-1000 animate-[fade-up-blur_0.8s_ease-out_forwards]"
             style={{ animationDelay: `${i * 150}ms` }}
           >
             <div className={`relative glass p-10 rounded-[3rem] flex flex-col items-center text-center transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] border border-white/5 hover:border-yellow-500/30 hover:bg-white/[0.08] hover:-translate-y-4 hover:rotate-x-3 hover:rotate-y-3 ${cert.glow} shadow-2xl`}>
-              
+
               {/* Floating ID Badge */}
               <div className="absolute top-8 left-8 text-[12px] font-black text-white/5 group-hover:text-yellow-500/20 transition-colors tracking-tighter">
                 CERT // {cert.id}

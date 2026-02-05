@@ -17,13 +17,25 @@ const skillCategories = [
     accent: 'from-cyan-500 to-blue-500'
   },
   {
+    title: 'AI/ML & Technologies',
+    skills: [
+      { name: 'AI/ML', level: 85 },
+      { name: 'RAG Systems', level: 80 },
+      { name: 'Vector Databases', level: 75 },
+      { name: 'Web Scraping', level: 85 },
+      { name: 'Cognitive Crafting', level: 70 }
+    ],
+    icon: 'fa-brain',
+    accent: 'from-violet-500 to-purple-500'
+  },
+  {
     title: 'Cyber Security & Tools',
     skills: [
       { name: 'Nessus', level: 75 },
-      { name: 'Burp Suite', level: 70 },
-      { name: 'Wireshark', level: 75 },
+      { name: 'BurpSuite', level: 70 },
+      { name: 'WireShark', level: 75 },
       { name: 'Network Security', level: 80 },
-      { name: 'Pentesting', level: 70 }
+      { name: 'Threat Analysis', level: 75 }
     ],
     icon: 'fa-user-secret',
     accent: 'from-purple-500 to-pink-500'
@@ -77,7 +89,7 @@ export const Skills: React.FC = () => {
         <h2 className="text-4xl md:text-5xl font-black">Technical <span className="gradient-text">Skillset</span></h2>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-8">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
         {skillCategories.map((cat, i) => (
           <div
             key={i}

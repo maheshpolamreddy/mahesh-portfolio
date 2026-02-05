@@ -21,7 +21,7 @@ const projects = [
     category: 'Web Development'
   },
   {
-    title: 'Professional Milk Dairy Ledger',
+    title: 'Professional Dairy Ledger',
     description: 'Developed a specialized dairy management system for recording daily milk collection, managing farmer accounts, and maintaining accurate ledger logs with secure date-based storage.',
     tags: ['Python', 'Django/Flask', 'HTML', 'CSS', 'SQL'],
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200',
@@ -61,8 +61,8 @@ export const Projects: React.FC = () => {
             key={category}
             onClick={() => setActiveFilter(category)}
             className={`px-6 py-2.5 rounded-full font-bold text-sm uppercase tracking-wider transition-all duration-300 ${activeFilter === category
-                ? 'bg-cyan-500 text-black shadow-lg shadow-cyan-500/50 scale-105'
-                : 'glass border border-white/10 text-gray-400 hover:border-cyan-500/50 hover:text-white'
+              ? 'bg-cyan-500 text-black shadow-lg shadow-cyan-500/50 scale-105'
+              : 'glass border border-white/10 text-gray-400 hover:border-cyan-500/50 hover:text-white'
               }`}
           >
             {category}
