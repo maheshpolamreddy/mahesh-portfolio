@@ -1,10 +1,46 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Polamreddy Mahesh Reddy | Portfolio</title>
+
+    <!-- Primary Meta Tags -->
+    <title>Polamreddy Mahesh Reddy | Python Developer & Cyber Security Enthusiast</title>
+    <meta name="title" content="Polamreddy Mahesh Reddy | Python Developer & Cyber Security Enthusiast">
+    <meta name="description"
+        content="Computer Science undergraduate specializing in Python development, AI/ML, and cybersecurity. Experienced in building secure, scalable applications with Django, Flask, and modern web technologies.">
+    <meta name="keywords"
+        content="Mahesh Reddy, Python Developer, Cyber Security, Web Development, AI/ML, Django, Flask, Portfolio, Computer Science">
+    <meta name="author" content="Polamreddy Mahesh Reddy">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://maheshsprofessionalportfolio.netlify.app/">
+    <meta property="og:title" content="Polamreddy Mahesh Reddy | Python Developer & Cyber Security Enthusiast">
+    <meta property="og:description"
+        content="Computer Science undergraduate specializing in Python development, AI/ML, and cybersecurity. Experienced in building secure, scalable applications.">
+    <meta property="og:image" content="https://maheshsprofessionalportfolio.netlify.app/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://maheshsprofessionalportfolio.netlify.app/">
+    <meta property="twitter:title" content="Polamreddy Mahesh Reddy | Python Developer & Cyber Security Enthusiast">
+    <meta property="twitter:description"
+        content="Computer Science undergraduate specializing in Python development, AI/ML, and cybersecurity.">
+    <meta property="twitter:image" content="https://maheshsprofessionalportfolio.netlify.app/og-image.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="alternate icon" href="/favicon.ico">
+
+    <!-- Performance Optimizations -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://images.unsplash.com">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -15,33 +51,61 @@
             color: #ffffff;
             overflow-x: hidden;
         }
+
         .glass {
             background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
+
         .gradient-text {
             background: linear-gradient(90deg, #8b5cf6, #3b82f6, #2dd4bf);
+            background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
         .animate-blob {
             animation: blob 7s infinite;
         }
+
         @keyframes blob {
-            0% { transform: translate(0px, 0px) scale(1); }
-            33% { transform: translate(30px, -50px) scale(1.1); }
-            66% { transform: translate(-20px, 20px) scale(0.9); }
-            100% { transform: translate(0px, 0px) scale(1); }
+            0% {
+                transform: translate(0px, 0px) scale(1);
+            }
+
+            33% {
+                transform: translate(30px, -50px) scale(1.1);
+            }
+
+            66% {
+                transform: translate(-20px, 20px) scale(0.9);
+            }
+
+            100% {
+                transform: translate(0px, 0px) scale(1);
+            }
         }
-        .animation-delay-2000 { animation-delay: 2s; }
-        .animation-delay-4000 { animation-delay: 4s; }
-        
+
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+
+        .animation-delay-4000 {
+            animation-delay: 4s;
+        }
+
         .perspective-1000 {
             perspective: 1000px;
         }
-        .rotate-x-2 { transform: rotateX(2deg); }
-        .rotate-y-2 { transform: rotateY(2deg); }
+
+        .rotate-x-2 {
+            transform: rotateX(2deg);
+        }
+
+        .rotate-y-2 {
+            transform: rotateY(2deg);
+        }
 
         /* Powerful Name Animation - Exactly 5 Seconds */
         .power-animate {
@@ -56,30 +120,35 @@
                 letter-spacing: 1.5em;
                 filter: blur(25px) brightness(4) contrast(1.5);
                 transform: scale(0.7) translateY(40px);
-                text-shadow: 0 0 80px rgba(34,211,238,1);
+                text-shadow: 0 0 80px rgba(34, 211, 238, 1);
             }
+
             5% {
                 opacity: 1;
                 filter: blur(0px) brightness(2);
-                text-shadow: 15px 0 0 rgba(255,0,0,0.7), -15px 0 0 rgba(0,255,255,0.7);
+                text-shadow: 15px 0 0 rgba(255, 0, 0, 0.7), -15px 0 0 rgba(0, 255, 255, 0.7);
                 transform: scale(1.1) translateY(0);
             }
+
             15% {
                 letter-spacing: 0.2em;
                 filter: brightness(1.4);
-                text-shadow: 8px 0 0 rgba(255,0,0,0.3), -8px 0 0 rgba(0,255,255,0.3);
+                text-shadow: 8px 0 0 rgba(255, 0, 0, 0.3), -8px 0 0 rgba(0, 255, 255, 0.3);
                 transform: scale(1.05);
             }
+
             25% {
                 letter-spacing: -0.02em;
                 filter: brightness(1.2);
-                text-shadow: 2px 0 0 rgba(255,0,0,0.1), -2px 0 0 rgba(0,255,255,0.1);
+                text-shadow: 2px 0 0 rgba(255, 0, 0, 0.1), -2px 0 0 rgba(0, 255, 255, 0.1);
                 transform: scale(1);
             }
+
             85% {
                 filter: brightness(1.1);
-                text-shadow: 0 0 30px rgba(34,211,238,0.6);
+                text-shadow: 0 0 30px rgba(34, 211, 238, 0.6);
             }
+
             100% {
                 opacity: 1;
                 letter-spacing: normal;
@@ -94,16 +163,62 @@
         }
 
         @keyframes powerful-glow {
-            0% { box-shadow: 0 0 0 rgba(34,211,238,0); }
-            10% { box-shadow: 0 0 120px 60px rgba(34,211,238,0.25); }
-            90% { box-shadow: 0 0 120px 60px rgba(34,211,238,0.15); }
-            100% { box-shadow: 0 0 0 rgba(34,211,238,0); }
+            0% {
+                box-shadow: 0 0 0 rgba(34, 211, 238, 0);
+            }
+
+            10% {
+                box-shadow: 0 0 120px 60px rgba(34, 211, 238, 0.25);
+            }
+
+            90% {
+                box-shadow: 0 0 120px 60px rgba(34, 211, 238, 0.15);
+            }
+
+            100% {
+                box-shadow: 0 0 0 rgba(34, 211, 238, 0);
+            }
         }
 
         /* Smooth scrolling */
-        html { scroll-behavior: smooth; }
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Accessibility - Skip to Content */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        /* Reduced Motion Support */
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+        /* Focus Visible Styles */
+        *:focus-visible {
+            outline: 2px solid rgb(34, 211, 238);
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
     </style>
-<script type="importmap">
+    <script type="importmap">
 {
   "imports": {
     "react/": "https://esm.sh/react@^19.2.3/",
@@ -113,10 +228,43 @@
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="/index.css">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Polamreddy Mahesh Reddy",
+      "url": "https://maheshsprofessionalportfolio.netlify.app/",
+      "jobTitle": "Python Developer & Cyber Security Enthusiast",
+      "description": "Computer Science undergraduate specializing in Python development, AI/ML, and cybersecurity",
+      "alumniOf": "Computer Science",
+      "email": "polamreddymahesh623@gmail.com",
+      "telephone": "+91-70134-41009",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Nellore",
+        "addressRegion": "Andhra Pradesh",
+        "addressCountry": "India"
+      },
+      "sameAs": [
+        "https://github.com/maheshpolamreddy",
+        "https://linkedin.com/in/maheshpolamreddy"
+      ]
+    }
+    </script>
 </head>
+
 <body>
+    <!-- Skip to Content Link for Accessibility -->
+    <a href="#main-content"
+        class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-6 focus:py-3 focus:bg-cyan-500 focus:text-black focus:font-bold focus:rounded-lg focus:shadow-lg">
+        Skip to main content
+    </a>
+
     <div id="root"></div>
-<script type="module" src="/index.tsx"></script>
+    <script type="module" src="/index.tsx"></script>
 </body>
+
 </html>

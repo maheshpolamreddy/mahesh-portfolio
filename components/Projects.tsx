@@ -1,34 +1,47 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 
 const projects = [
   {
     title: 'CCR Compliance Agent',
     description: 'Developed a complete AI-powered compliance system for the California Code of Regulations. Features web crawling with Crawl4AI, vector database integration using Supabase + pgvector, RAG implementation with OpenAI, and a futuristic web interface with voice-enabled queries and real-time AI responses.',
     tags: ['Python', 'AI/ML', 'RAG', 'Crawl4AI', 'Supabase', 'pgvector', 'OpenAI', 'Web Scraping'],
-    image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=1200', // AI/compliance/legal tech visual
+    image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=1200',
     link: 'https://california-code-of-regulations.onrender.com',
-    github: 'https://github.com/maheshpolamreddy/california-code-of-regulations'
+    github: 'https://github.com/maheshpolamreddy/california-code-of-regulations',
+    category: 'AI/ML'
   },
   {
     title: 'CHAT VERSE',
     description: 'Developed a secure chat platform supporting real-time group and private messaging with strong user authentication and data encryption. Focused on privacy and scalability.',
     tags: ['Python', 'Django/Flask', 'WebSockets', 'HTML', 'CSS', 'JavaScript', 'SQL'],
-    image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200', // High-tech security/code visual
+    image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200',
     link: 'https://chatverse3o.lovable.app/',
-    github: 'https://github.com/maheshpolamreddy/chatverse3o'
+    github: 'https://github.com/maheshpolamreddy/chatverse3o',
+    category: 'Web Development'
   },
   {
     title: 'Professional Milk Dairy Ledger',
     description: 'Developed a specialized dairy management system for recording daily milk collection, managing farmer accounts, and maintaining accurate ledger logs with secure date-based storage.',
     tags: ['Python', 'Django/Flask', 'HTML', 'CSS', 'SQL'],
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200', // Modern data ledger/dashboard visual
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200',
     link: 'https://vijayadairyledger.lovable.app',
-    github: 'https://github.com/maheshpolamreddy/vijayadairyledger'
+    github: 'https://github.com/maheshpolamreddy/vijayadairyledger',
+    category: 'Web Development'
   }
 ];
 
+const categories = ['All', 'AI/ML', 'Web Development', 'Python'];
+
 export const Projects: React.FC = () => {
+  const [activeFilter, setActiveFilter] = useState('All');
+
+  const filteredProjects = activeFilter === 'All'
+    ? projects
+    : projects.filter(project =>
+      project.category === activeFilter || project.tags.includes(activeFilter)
+    );
+
   return (
     <div className="max-w-7xl mx-auto px-6 md:px-12">
       <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
@@ -41,23 +54,45 @@ export const Projects: React.FC = () => {
         </p>
       </div>
 
+      {/* Filter Buttons */}
+      <div className="flex flex-wrap gap-3 mb-12 justify-center">
+        {categories.map((category) => (
+          <button
+            key={category}
+            onClick={() => setActiveFilter(category)}
+            className={`px-6 py-2.5 rounded-full font-bold text-sm uppercase tracking-wider transition-all duration-300 ${activeFilter === category
+                ? 'bg-cyan-500 text-black shadow-lg shadow-cyan-500/50 scale-105'
+                : 'glass border border-white/10 text-gray-400 hover:border-cyan-500/50 hover:text-white'
+              }`}
+          >
+            {category}
+          </button>
+        ))}
+      </div>
+
       <div className="grid md:grid-cols-2 gap-12">
-        {projects.map((project, i) => (
-          <div 
-            key={i} 
+        {filteredProjects.map((project, i) => (
+          <div
+            key={i}
             className="group relative glass rounded-[40px] overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] hover:scale-[1.03] hover:-translate-y-4 hover:shadow-[0_40px_80px_-20px_rgba(34,211,238,0.35)] border border-white/5 hover:border-cyan-500/50 hover:bg-white/5"
+            style={{
+              animation: 'fadeIn 0.5s ease-out forwards',
+              animationDelay: `${i * 100}ms`,
+              opacity: 0
+            }}
           >
             {/* Project Image Container */}
             <div className="aspect-video overflow-hidden relative">
-              <img 
-                src={project.image} 
-                alt={project.title} 
+              <img
+                src={project.image}
+                alt={project.title}
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 group-hover:rotate-1"
+                loading="lazy"
               />
               {/* Cinematic Overlays */}
               <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/20 to-transparent opacity-90 group-hover:opacity-60 transition-opacity duration-500"></div>
               <div className="absolute inset-0 bg-cyan-500/5 mix-blend-overlay group-hover:bg-cyan-500/20 transition-all duration-500"></div>
-              
+
               {/* Action Hint Indicator */}
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
                 <div className="bg-cyan-500/20 backdrop-blur-md border border-cyan-400/30 p-5 rounded-full scale-50 group-hover:scale-100 transition-all duration-500 shadow-[0_0_30px_rgba(34,211,238,0.4)]">
@@ -68,7 +103,7 @@ export const Projects: React.FC = () => {
               {/* Top Right Label */}
               <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-x-4 group-hover:translate-x-0">
                 <div className="bg-cyan-500 text-black px-5 py-2 rounded-full shadow-lg shadow-cyan-500/50 font-bold text-[11px] uppercase tracking-tighter">
-                   View Project
+                  View Project
                 </div>
               </div>
             </div>
@@ -82,17 +117,17 @@ export const Projects: React.FC = () => {
                   </h3>
                 </div>
                 <div className="flex space-x-3">
-                  <a 
-                    href={project.github} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-12 h-12 flex items-center justify-center rounded-full glass border border-white/10 text-gray-400 hover:text-black hover:bg-cyan-500 hover:border-cyan-400 hover:scale-110 hover:rotate-12 hover:shadow-[0_0_20px_rgba(34,211,238,0.5)] transition-all duration-300 ease-out"
                     title="View Source"
                   >
                     <i className="fab fa-github text-lg"></i>
                   </a>
-                  <a 
-                    href={project.link} 
+                  <a
+                    href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 flex items-center justify-center rounded-full glass border border-white/10 text-gray-400 hover:text-black hover:bg-cyan-500 hover:border-cyan-400 hover:scale-110 hover:-translate-y-1 hover:translate-x-1 hover:shadow-[0_0_20px_rgba(34,211,238,0.5)] transition-all duration-300 ease-out"
@@ -109,21 +144,34 @@ export const Projects: React.FC = () => {
 
               <div className="flex flex-wrap gap-2 pt-2 transition-transform duration-500 group-hover:translate-x-1">
                 {project.tags.map((tag, j) => (
-                  <span 
-                    key={j} 
+                  <span
+                    key={j}
                     className="text-[10px] font-bold uppercase tracking-wider text-cyan-400 px-3 py-1.5 rounded-full bg-cyan-400/5 border border-cyan-400/10 group-hover:border-cyan-400/40 group-hover:bg-cyan-400/10 transition-all duration-300"
                   >
                     {tag}
                   </span>
                 ))}
               </div>
-              
+
               {/* Bottom Decorative Animated Bar */}
               <div className="absolute bottom-0 left-0 h-[4px] w-0 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 group-hover:w-full transition-all duration-700"></div>
             </div>
           </div>
         ))}
       </div>
+
+      <style>{`
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      `}</style>
     </div>
   );
 };

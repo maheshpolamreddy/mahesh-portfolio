@@ -10,6 +10,7 @@ import { Certifications } from './components/Certifications';
 import { Contact } from './components/Contact';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
+import { BackToTop } from './components/BackToTop';
 
 const App: React.FC = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -31,12 +32,12 @@ const App: React.FC = () => {
       </div>
 
       <Navbar scrollY={scrollY} />
-      
-      <main className="relative z-10 pt-20">
+
+      <main className="relative z-10 pt-20" id="main-content">
         <section id="hero">
           <Hero />
         </section>
-        
+
         <section id="about" className="py-24 px-6 md:px-12 max-w-7xl mx-auto scroll-mt-20">
           <About />
         </section>
@@ -66,6 +67,7 @@ const App: React.FC = () => {
         </section>
       </main>
 
+      <BackToTop />
       <Footer />
     </div>
   );
