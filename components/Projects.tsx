@@ -3,6 +3,14 @@ import React from 'react';
 
 const projects = [
   {
+    title: 'CCR Compliance Agent',
+    description: 'Developed a complete AI-powered compliance system for the California Code of Regulations. Features web crawling with Crawl4AI, vector database integration using Supabase + pgvector, RAG implementation with OpenAI, and a futuristic web interface with voice-enabled queries and real-time AI responses.',
+    tags: ['Python', 'AI/ML', 'RAG', 'Crawl4AI', 'Supabase', 'pgvector', 'OpenAI', 'Web Scraping'],
+    image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=1200', // AI/compliance/legal tech visual
+    link: 'https://california-code-of-regulations.onrender.com',
+    github: 'https://github.com/maheshpolamreddy/california-code-of-regulations'
+  },
+  {
     title: 'CHAT VERSE',
     description: 'Developed a secure chat platform supporting real-time group and private messaging with strong user authentication and data encryption. Focused on privacy and scalability.',
     tags: ['Python', 'Django/Flask', 'WebSockets', 'HTML', 'CSS', 'JavaScript', 'SQL'],
