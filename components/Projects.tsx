@@ -6,7 +6,7 @@ const projects = [
     title: 'MOONIT AI',
     description: 'An advanced AI-powered chat application with a stunning moon/space-themed interface. Features real-time AI conversations, user authentication, responsive design, and an immersive cosmic user experience with animated backgrounds and smooth interactions.',
     tags: ['React', 'TypeScript', 'AI/ML', 'Next.js', 'TailwindCSS', 'Authentication', 'Real-time Chat'],
-    image: 'https://images.unsplash.com/photo-1532693322450-2cb5c511067d?auto=format&fit=crop&q=80&w=1200',
+    image: 'https://images.unsplash.com/photo-1509773896068-7fd415d91e2e?auto=format&fit=crop&q=80&w=3840',
     link: 'https://moonit-ai.vercel.app',
     github: 'https://github.com/maheshpolamreddy/MOONIT-AI',
     category: 'AI/ML'
