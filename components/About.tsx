@@ -5,7 +5,7 @@ export const About: React.FC = () => {
   const stats = [
     { label: 'CGPA', value: '8.5', icon: 'fa-graduation-cap' },
     { label: 'Internships', value: '1', icon: 'fa-briefcase' },
-    { label: 'Projects', value: '3', icon: 'fa-code-branch' },
+    { label: 'Projects', value: '4', icon: 'fa-code-branch' },
     { label: 'Certifications', value: '4', icon: 'fa-award' },
   ];
 

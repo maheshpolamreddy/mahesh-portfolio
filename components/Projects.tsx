@@ -3,6 +3,15 @@ import React, { useState } from 'react';
 
 const projects = [
   {
+    title: 'MOONIT AI',
+    description: 'An advanced AI-powered chat application with a stunning moon/space-themed interface. Features real-time AI conversations, user authentication, responsive design, and an immersive cosmic user experience with animated backgrounds and smooth interactions.',
+    tags: ['React', 'TypeScript', 'AI/ML', 'Next.js', 'TailwindCSS', 'Authentication', 'Real-time Chat'],
+    image: 'https://images.unsplash.com/photo-1532693322450-2cb5c511067d?auto=format&fit=crop&q=80&w=1200',
+    link: 'https://moonit-ai.vercel.app',
+    github: 'https://github.com/maheshpolamreddy/MOONIT-AI',
+    category: 'AI/ML'
+  },
+  {
     title: 'CCR Compliance Agent',
     description: 'Developed a complete AI-powered compliance system for the California Code of Regulations. Features web crawling with Crawl4AI, vector database integration using Supabase + pgvector, RAG implementation with OpenAI, and a futuristic web interface with voice-enabled queries and real-time AI responses.',
     tags: ['Python', 'AI/ML', 'RAG', 'Crawl4AI', 'Supabase', 'pgvector', 'OpenAI', 'Web Scraping'],
