@@ -4,8 +4,8 @@ import React from 'react';
 export const About: React.FC = () => {
   const stats = [
     { label: 'CGPA', value: '8.5', icon: 'fa-graduation-cap' },
-    { label: 'Internships', value: '1', icon: 'fa-briefcase' },
-    { label: 'Projects', value: '4', icon: 'fa-code-branch' },
+    { label: 'Internships', value: '2', icon: 'fa-briefcase' },
+    { label: 'Projects', value: '5', icon: 'fa-code-branch' },
     { label: 'Certifications', value: '4', icon: 'fa-award' },
   ];
 
@@ -19,8 +19,8 @@ export const About: React.FC = () => {
           I focus on building efficient, scalable applications using clean, readable code.
         </p>
         <p className="text-gray-400 leading-relaxed text-lg transition-colors hover:text-gray-200">
-          With hands-on experience in security assessments and vulnerability evaluations, I am eager to contribute to collaborative
-          teams and solve real-world problems through practical learning and technical mentorship.
+          Recent experience includes an AI and machine learning internship at Eedas Analytics Private Limited alongside security-focused work (Supraja Technologies).
+          I am eager to contribute to collaborative teams and solve real-world problems through practical learning and technical mentorship.
         </p>
 
         <div className="grid grid-cols-2 gap-4">
