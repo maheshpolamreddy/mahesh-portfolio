@@ -3,6 +3,15 @@ import React, { useState } from 'react';
 
 const projects = [
   {
+    title: 'BuildCraft AI',
+    description: 'An AI intelligence engine that turns app ideas into structured plans: describe your idea in plain language, get tool recommendations and technical architecture, and connect with matched developers in a secure workspace.',
+    tags: ['Next.js', 'TypeScript', 'AI/ML', 'TailwindCSS', 'Vercel', 'Firebase'],
+    image: new URL('../assets/buildcraft-ai.png', import.meta.url).href,
+    link: 'https://buildcraft-omega.vercel.app/',
+    github: 'https://github.com/maheshpolamreddy/BuildCraft-AI',
+    category: 'AI/ML'
+  },
+  {
     title: 'MOONIT AI',
     description: 'An advanced AI-powered chat application with a stunning moon/space-themed interface. Features real-time AI conversations, user authentication, responsive design, and an immersive cosmic user experience with animated backgrounds and smooth interactions.',
     tags: ['React', 'TypeScript', 'AI/ML', 'Next.js', 'TailwindCSS', 'Authentication', 'Real-time Chat'],
