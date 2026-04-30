@@ -13,14 +13,15 @@ export const About: React.FC = () => {
     <div className="grid md:grid-cols-2 gap-16 items-center">
       <div className="space-y-8">
         <div className="inline-block px-3 py-1 bg-cyan-500/10 text-cyan-400 text-sm font-bold rounded animate-pulse">ABOUT ME</div>
-        <h2 className="text-4xl md:text-5xl font-bold tracking-tight leading-tight">Focusing on Clean, Scalable <span className="text-cyan-400 drop-shadow-[0_0_15px_rgba(34,211,238,0.3)]">Backend Systems</span></h2>
+        <h2 className="text-4xl md:text-5xl font-bold tracking-tight leading-tight">From <span className="text-cyan-400 drop-shadow-[0_0_15px_rgba(34,211,238,0.3)]">AI &amp; Data</span> to Ship-Ready Web Apps</h2>
         <p className="text-gray-400 leading-relaxed text-lg transition-colors hover:text-gray-200">
-          Motivated Computer Science undergraduate with a strong grounding in Python programming and core computer science concepts.
-          I focus on building efficient, scalable applications using clean, readable code.
+          I&apos;m a Computer Science undergraduate who builds end-to-end software with Python, Next.js, and TypeScript—layering retrieval-augmented pipelines, real-time UX, and reliable backends where the problem needs it.
+          My featured work spans AI chat and product-discovery flows, a compliance-oriented RAG system with crawling and vector search, and secure full-stack platforms for messaging and operational record-keeping—each designed to stay maintainable as requirements grow.
         </p>
         <p className="text-gray-400 leading-relaxed text-lg transition-colors hover:text-gray-200">
-          Recent experience includes an AI and machine learning internship at Eedas Analytics Private Limited alongside security-focused work (Supraja Technologies).
-          I am eager to contribute to collaborative teams and solve real-world problems through practical learning and technical mentorship.
+          My most recent internship was <span className="text-gray-300">AI &amp; Machine Learning at Eedas Analytics Private Limited</span>—a structured program in applied ML workflows, analytical thinking, and delivery—completed with certification in April 2026.
+          Before that I trained in <span className="text-gray-300">cybersecurity at Supraja Technologies</span>, which shaped how I approach secure design and tooling.
+          I thrive in collaborative teams solving real problems with clear architecture and iterative shipping.
         </p>
 
         <div className="grid grid-cols-2 gap-4">
